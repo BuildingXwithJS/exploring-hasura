@@ -1,0 +1,26 @@
+{
+  "name": "exploring-hasura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
+  "license": "MIT",
+  "dependencies": {
+    "connect-cookies": "^0.0.0",
+    "graphql": "^15.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^9.4.4",
+    "nookies": "^2.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.4.6",
+    "urql": "^1.9.8"
+  },
+  "devDependencies": {}
+}
