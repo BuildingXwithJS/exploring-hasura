@@ -7,8 +7,14 @@ const jwtSecret = 'test_jwt_secret_with_a_long_enough_key';
 
 const users = [
   {
+    id: '1',
     email: 'test@test.com',
     password: '123',
+  },
+  {
+    id: '2',
+    email: 'other@mail.com',
+    password: '321',
   },
 ];
 
@@ -43,6 +49,7 @@ export default async (req, res) => {
       'x-hasura-allowed-roles': ['user'],
       'x-hasura-default-role': 'user',
       'x-hasura-user-email': user.email,
+      'x-hasura-user-id': user.id,
     },
   };
   const token = jwt.sign(resposeObject, jwtSecret);
@@ -51,6 +58,7 @@ export default async (req, res) => {
 
   // saver token to cookies
   res.cookies.set('hasura-token', token);
+  res.cookies.set('hasura-user', user.id);
 
   res.status(200).json({ token });
 };

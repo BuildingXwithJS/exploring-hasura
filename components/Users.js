@@ -1,7 +1,7 @@
 import { useQuery } from 'urql';
 import { useMemo } from 'react';
 
-const TodosQuery = `
+const UsersQuery = `
   query {
     User {
       email
@@ -23,10 +23,10 @@ export default function Users({ cookies }) {
         };
       },
     }),
-    []
+    [cookies]
   );
   const [{ data, fetching, error }] = useQuery({
-    query: TodosQuery,
+    query: UsersQuery,
     context,
   });
   if (fetching) return <p>Loading...</p>;
@@ -39,7 +39,7 @@ export default function Users({ cookies }) {
 
   return (
     <div className="flex flex-col m-2">
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <h1>Hi {data.User?.[0]?.email ?? 'Unknown'}!</h1>
     </div>
   );
 }
