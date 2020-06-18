@@ -2,7 +2,7 @@
 
 > Free open-source tutorial on creating a simple todo app with Hasura
 
-This repository contains code and related materials for [exploring Hasure](https://youtu.be/288U4BEqZqw) video.
+This repository contains code and related materials for [exploring Hasura](https://youtu.be/288U4BEqZqw) video.
 
 ## Project description
 
